@@ -1,0 +1,562 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    
+  }
+
+html{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: background-image 0.6s ease-in-out;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+#sidemenu{
+    float: left;
+    width: 15vw;
+    height: 100%;
+    background-color: rgb(29, 29, 29);
+    padding-left: 1%;
+    padding-right: 1%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+#sidemenu>p{
+    padding: 20%;
+    font-size:20px;
+    font-weight: 600;
+    color:white;
+    
+}
+
+#sidemenu>ul{
+    padding: 0;
+}
+
+li::marker {
+    content: "";
+  }
+
+.option{
+    margin-bottom: 20%;
+    padding: 8%;
+    text-align: left;
+    margin-left:5%;
+    margin-right: 5%;
+    color:white;
+    font-size:20px;
+    list-style: none;
+    font-weight: 500;
+    transition: 200ms;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.table{
+    margin-right: 10%;
+}
+.grid{
+    margin-right: 10%;
+}
+.option:hover{
+    background-color: white;
+    color:black;
+    font-weight: 500;
+    border-radius: 20px;
+
+    
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.forSearch{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 15vw;
+    justify-content: space-around;
+}
+#dashboard{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 15vw;
+    justify-content: space-around;
+}
+
+.search{
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+.search input{
+    border:0;
+    outline:0;
+    background:#000000 ;
+    color:#ffffff;
+    padding: 10px;
+    border-radius: 30px;
+    margin-right: 40px;
+    font-size:18px;
+    width: 35vw;
+    box-shadow: 3px 0px 15px black;
+    border:2px solid rgb(232, 232, 232);
+}
+
+.search input::placeholder{
+    color: #ffffff;
+    text-align: center;
+}
+.search button{
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    width:50px;
+    height: 50px;   
+    transition: 300ms;
+    background-color: rgb(212, 213, 214);
+}
+
+.search button:hover{
+    background-color: rgb(0, 0, 0);  
+    color: white;
+}
+.weather-status{
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    width: 30vw;
+    margin-top: 2%;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    flex-wrap: wrap;
+    border-radius: 20px ;
+    box-shadow: 3px 10px 30px black;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.weather-status>p{
+    font-weight: 600;
+    color: black;
+}
+
+#cityName{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.temperatureSelect{
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000;
+    color: white;
+    margin-top: 2%;
+    border-radius: 10px;
+    padding: 20px;
+    border:2px solid rgb(232, 232, 232);
+    margin-bottom: 5vh;
+    width: 35%;
+}
+
+.charts{
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid black;
+    width: 50%;
+    border-radius: 10px;
+    display: none;
+    padding:30px;
+    height: auto;
+    margin-bottom: 30px;
+}   
+
+canvas {
+    width: 100% ;
+    height: auto ;
+}
+
+
+#tables{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 15vw;
+    justify-content: space-around;
+}
+
+.chatbot{
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    width: 50vw;
+    margin-top: 2%;
+    padding: 0.1%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 3px 10px 30px black;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.chatSearch{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin-bottom: 15px;
+}
+#chatarea{
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    height: 70vh;
+    padding: 10px;
+    margin-bottom: 5%;
+    
+    overflow-y: auto;
+}
+
+#chatarea::-webkit-scrollbar {
+    width: 3px;
+    background-color: white;
+}
+#chatarea::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 4px; 
+  }
+  
+  #chatarea::-webkit-scrollbar-thumb:hover {
+    background: #1d1d1d; 
+  }
+#question{
+    border:0;
+    outline:0;
+    background:#000000 ;
+    color:#ffffff;
+    padding: 10px;
+    border-radius: 30px;
+    font-size:18px;
+    width: 80%;
+}
+
+
+#sendQuestion{
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    width:50px;
+    height: 50px;   
+    transition: 300ms;
+    
+    background-color: rgb(212, 213, 214);
+}
+
+#sendQuestion:hover{
+    background-color: rgb(0, 0, 0);  
+    color: white;
+}
+
+#question::placeholder{
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+}
+
+.chatBotText{
+    border-radius: 10px;
+    background-color: black;
+    height: auto;
+    width: auto;
+    color: white;
+    padding: 8px;
+    width: 50%;
+    margin-bottom: 10px;
+    box-shadow: 3px 0px 7px black;
+}
+
+#tables{
+    display: none;
+}
+/*  table styling */
+
+
+.tableContainer{
+    background-color: white;
+    height: auto;
+    box-shadow: 0px 0px 30px black;
+    width:50vw;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10vh;
+}
+.tableContainer h1{
+    text-align: center;
+}
+#table table {
+    width: 100%;    
+    font-size:22px;
+    border-collapse: collapse;       
+  }
+  
+  #table th {
+    background-color: #000000;       
+    color: white;                   
+    padding: 12px 15px;             
+    text-align: left;               
+    border-bottom: 2px solid #ddd;   
+  }
+  #table tr {
+    background-color: #ffffff;       
+  }
+  
+  
+  #table td {
+    padding: 12px 15px;             
+    border-bottom: 1px solid #ddd;   
+  }
+  #table tbody tr:hover {
+    background-color: #f1f1f1;       
+  }
+  
+  #table tbody tr:nth-child(even) {
+    background-color: #dfdede;       
+  }
+  
+  #table table {
+    border: 1px solid #ddd;         
+  }
+  
+  #table {
+    overflow-x: auto;                
+  }
+  
+  #table td, #table th {
+    text-align: left;               
+  }
+.paginationButtons{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 4%;
+    width: 100%;
+    
+}
+.tableContainer select{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.paginationButtons button{
+    margin-top: 10px;
+    border: 0;
+    outline: 0;
+    width:100px;
+    height: 50px;   
+    transition: 300ms;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.loader {
+    height: 20px;
+    aspect-ratio: 2.5;
+    --_g: no-repeat radial-gradient(farthest-side,#000 90%,#0000);
+    background: var(--_g), var(--_g), var(--_g), var(--_g);
+    background-size: 20% 50%;
+    animation: l44 1s infinite linear alternate; 
+  }
+  @keyframes l44 {
+    0%,
+    5%    {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+    12.5% {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+    25%   {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 0   ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+    37.5% {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 0   ,calc(2*100%/3) 0   ,calc(3*100%/3) 50% }
+    50%   {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 0   ,calc(3*100%/3) 0   }
+    62.5% {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 0   }
+    75%   {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+    87.5% {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 100%}
+    95%,
+    100%  {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+  }
+/*
+This code is for making the website responsive
+
+*/
+
+@media (max-width:1280px){
+    #sidemenu>p{
+        font-size: 14px;
+    }
+
+    #sidemenu li{
+        font-size: 14px;
+    }
+    .charts{
+        width: 80%;
+        height:auto;
+    }
+}
+
+@media (max-width:900px){
+    .search input{
+        height: 10px;
+    }
+    *{
+        font-size: 12px;
+    }
+    #sidemenu{
+        padding:2px;
+        text-align: center;     
+    }
+    #sidemenu>p{
+        font-size:12px;
+        padding: 5px;
+    }
+    
+    .weather-status{
+        width: 50%;
+    }
+    #sidemenu ul{
+        width:30px;
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 90px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+    #sidemenu li{
+        margin-bottom: 40px;
+        padding: 5px;
+    }
+
+    #sidemenu span{
+        display: none;
+        
+    }
+    #sidemenu i{
+        font-size: 20px;
+        margin: 0;
+        text-align: center;
+    }
+    .paginationButtons button{
+    
+        
+        width: 70px;
+        height: 30px;
+        font-size: 12px;
+        
+    }
+    .loader {
+        height: 10px;
+    }
+    .tableContainer{
+        width: 80vw;
+    }
+}
+
+@media (max-width:700px){
+    body {
+        overflow-x: hidden;
+    }
+    #sidemenu{
+        float: none;
+        flex-direction: column;
+        height: auto;
+        width: 100vw;
+        position: static;
+        justify-content: space-around;
+    }
+    #sidemenu p{
+        font-size: 20px;
+        margin-bottom: 30px;
+        padding: 40px;
+        border-bottom: 1px solid white;
+        bottom:-1000px;
+    }
+    #sidemenu ul{
+        margin:0;
+        padding: 0;
+        display: flex;
+        width: 99vw;
+        flex-direction: row;
+    }
+    #sidemenu i{
+        display: inline;
+        font-size: 25px;
+        margin-right: 30px;
+        text-align: center;
+        
+        margin: 0;
+        text-align: center;
+    }
+    #sidemenu p{
+        padding-top:1px;
+    }
+    #dashboard{
+        margin-left: 0;
+    }
+    #tables{
+        margin-left: 0;
+    }
+    .forSearch{
+        margin-left: 0;
+    }
+    .weather-status{
+        width: 75%;
+    }
+
+    .search input,#question{
+        font-size:13px;
+        
+    }
+    .search button,#sendQuestion{
+        width:40px;
+        height: 40px;   
+    }
+    .chatbot{
+        width: 85vw;
+        height: 60vh;
+    }
+    .chatbot h1{
+        font-size: 20px;
+    }
+    .paginationButtons{
+    
+        
+        width: 80vw;
+        
+    }
+    .paginationButtons button{
+    
+        
+        width: 70px;
+        height: 30px;
+        font-size: 12px;
+        
+    }
+    .charts{
+        width: 60%;
+        height:auto;
+    }
+}
